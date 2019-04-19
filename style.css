@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800');
+
+*, *:before, *:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+	width: 100%;
+    min-height: 100vh;
+    padding-top: 5%;
+    position: relative;
+	overflow: hidden;
+}
+.header__maskBackground {
+    min-width: 100%;
+    min-height: 100%;
+    background: #FFF8;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.header__background {
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+	background-size: cover;
+}
+.header__title {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    color: #452345;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header__menu {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+.header__menu__item {
+    padding: 10px 0;
+    margin: 0 15px; 
+    color: #452345;
+	text-decoration: none;
+	text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;    
+}
+@media (max-width: 640px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__title {
+        font-size: 30px;
+    }
+    .header__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+	.header__menu__item {
+		font-size: 22px;
+	}
+}
+
+.main {
+    width: 100%;
+}
+.main__about {
+    width: 50%;
+    padding: 5% 0;
+    margin: 0 auto;
+}
+.about__title {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+    font-size: 30px;
+    color: #452345;
+    text-align: center;
+}
+.about__text {
+    margin: 7px 0;  
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+    font-size: 16px;
+    color: #452345;
+}
+.about__text:nth-child(2) {
+    font-weight: 600;
+}
+@media (max-width: 640px) {
+    .main__about {
+        width: 90%;
+    }
+}
+.main__research {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.research__title {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+    font-size: 30px;
+    color: #452345;
+    text-align: center;
+}
+.research__image {
+    display: inherit;
+    width: 20%;
+    margin-right: auto;
+}
+.research__image--mobile{
+    display: none;   
+}
+.research__image--left {
+    margin-right: 0;
+    margin-left: auto;
+}
+.research__section {
+    width: 70%;
+    margin: 5% 0;
+}
+.research__section__title {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+    font-size: 25px;
+    color: #452345;
+}
+.research__section__text {
+    margin: 7px 0;  
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+    font-size: 16px;
+    color: #452345;
+}
+@media (max-width: 640px) {
+    .main__research {
+        width: 90%;
+    }
+    .research__section {
+        width: 100%;
+    }
+    .research__image {
+        display: none;
+        margin: 0 auto;
+    }
+    .research__image--mobile {
+        width: 70%;
+        display: initial;
+    }
+}
+.main__team {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+.team__title {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+    font-size: 30px;
+    color: #452345;
+    text-align: center;
+}
+.team__card {
+    width: 30%;
+    margin: 15px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #452345;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.team__photo {
+    width: 100%;
+}
+.team__name {
+    width: 100%;
+    margin: 7px auto;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+    font-size: 16px;
+    color: #D0E7F3;
+    text-align: center;
+}
+.team__position {
+    width: 100%;
+    margin: 7px auto;
+    margin-bottom: 30px;  
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+    font-size: 16px;
+    color: #D0E7F3;
+    text-align: center;
+}
+.team__card--odd {
+    background: #D0E7F3;
+}
+
+.team__card--odd .team__name,
+.team__card--odd .team__position{
+    color:#452345
+}
+@media (max-width: 640px) {
+    .main__team {
+        width: 80%;
+        flex-direction: column;
+    }
+    .team__card {
+        width: 100%;
+    }
+}
+.main__contact {
+    width: 50%;
+    min-height: 60vh;
+    margin: 5% auto;
+}
+.contact__title {
+    width: 100%;
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+    font-size: 30px;
+    color: #452345;
+    text-align: center;
+}
+.contact__form{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.contact__input {
+    width: 49%;
+    padding: 5px 0;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #333;  
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+    font-size: 16px;
+    color: #333
+}
+.contact__input--message{
+    width: 100%;
+    margin-top: 30px;
+}
+.contact__input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+.contact__btn{
+    margin: 20px auto;
+    padding: 15px 60px;
+    background: #452345;
+    border: none;
+    border-radius: 30px;
+
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+    font-size: 20px;
+    color: #FFF;
+}
+@media (max-width: 640px) {
+    .main__contact {
+        width: 90%;
+        min-height: 60vh;
+        margin: 20% auto;
+    }
+    .contact__form {
+        margin: 30px auto;
+    }
+}
+.footer{
+    width: 100%;
+    padding: 0 10%;
+    background: #452345;
+
+    display: flex;
+    align-items: center;
+}
+.footer__title {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+    font-size: 30px;
+    color: #FFF;
+}
+.footer__info {
+    margin: 0 auto;
+}
+.footer__info__item {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+    font-size: 13px;
+    color: #FFF;
+}
+.footer__info__copyright {
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+    font-size: 13px;
+    color: #FFF;
+}
+.footer__link {
+    width: 30px;
+    margin: 0 10px;
+}
+.link__image {
+    width: 100%;
+}
+@media (max-width: 640px) {
+    .footer {
+        flex-direction: column;
+    }
+}
